@@ -1,0 +1,14 @@
+name: tpse_env
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas
+  - seaborn
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.6
+  - torchinfo
