@@ -144,22 +144,22 @@ def main(mode: str,
     # ===============================================
     # Training Settings
     # ===============================================
+    if (mode == "t") or (mode == "te"):
+        # set the supervised loss function
+        loss_supervised = torch.nn.CrossEntropyLoss()
 
-    # set the supervised loss function
-    loss_supervised = torch.nn.CrossEntropyLoss()
+        # set the unsupervised loss function
+        loss_unsupervised = torch.nn.MSELoss()
 
-    # set the unsupervised loss function
-    loss_unsupervised = torch.nn.MSELoss()
+        # set the optimizer
+        optim = torch.optim.Adam(tpse.parameters(),
+                                 lr=learning_rate)
 
-    # set the optimizer
-    optim = torch.optim.Adam(tpse.parameters(),
-                             lr=learning_rate)
-
-    # introduce a Learning Rate Scheduler
-    scheduler = torch.optim.lr_scheduler.StepLR(optimizer=optim,
-                                                step_size=(epochs // 3),
-                                                gamma=0.33,  # approx. 1/3
-                                                verbose=True)
+        # introduce a Learning Rate Scheduler
+        scheduler = torch.optim.lr_scheduler.StepLR(optimizer=optim,
+                                                    step_size=(epochs // 3),
+                                                    gamma=0.33,  # approx. 1/3
+                                                    verbose=True)
 
     # =============================================================================
     # FILE STRUCTURE CREATION!
@@ -250,9 +250,6 @@ def main(mode: str,
         # Weight Loading
         # =============================================================================
         print("Loading weights...")
-
-        # build the model
-        tpse = model_module.TPSE(encoder, decoder, classifier).to(device)
 
         if mode == "e":
             # if evaluation mode: get the user specified weights
