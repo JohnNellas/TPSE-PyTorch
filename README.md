@@ -66,7 +66,7 @@ along with train and evaluation mode (te). Additionally, concerning the weights,
 the weights achieving the best accuracy in the validation set during training are retained. Moreover,
 in evaluation mode, the user is mandatory to provide the weights to be loaded for evaluation. In train and evaluation mode,
 the weights achieving the best accuracy  in the validation set during training are utilized for evaluation.
-Trained weights for latent space dimensionality of 2, 10 and 18 are additionally provided at the directory ```provided weights```.
+Trained weights for latent space dimensionality of 2, 10 and 18 are additionally provided at the directory ```provided_tpse_weights_mnist```.
 Finally, during script execution a folder structure is created to facilitate the best weights (for t and te modes)
 along with classification and visualization results (for e and te modes).
 
