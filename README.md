@@ -1,6 +1,6 @@
 # Two Phase Supervised Encoder - (TP-SE)
 
-This repository contains the experiment implementation of the Two Phase Supervised Encoder for the MNIST dataset, with
+This repository contains the experiment implementation of the [Two Phase Supervised Encoder](https://www.sciencedirect.com/science/article/abs/pii/S0031320323005691) for the MNIST dataset, with
 the Python Programming Language and PyTorch Framework. 
 
 ## Usage
@@ -136,4 +136,22 @@ Start the interactive tool for 2D latent space exploration and image generation 
 facilitated at PATH.
 ```
 python3 vis.py --weightPath PATH
+```
+
+## Citation
+
+If you find the Two Phase Supervised Encoder useful in your research, please consider citing:
+```BibTeX
+@article{NELLAS2023109871,
+title = {Two phase cooperative learning for supervised dimensionality reduction},
+journal = {Pattern Recognition},
+volume = {144},
+pages = {109871},
+year = {2023},
+issn = {0031-3203},
+doi = {https://doi.org/10.1016/j.patcog.2023.109871},
+url = {https://www.sciencedirect.com/science/article/pii/S0031320323005691},
+author = {Ioannis A. Nellas and Sotiris K. Tasoulis and Spiros V. Georgakopoulos and Vassilis P. Plagianakos},
+keywords = {Artificial neural networks, Deep learning, Dimensionality reduction, Autoencoders, Image classification}
+}
 ```
